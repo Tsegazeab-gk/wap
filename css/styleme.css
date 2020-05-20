@@ -1,0 +1,51 @@
+
+* {
+
+}
+ body {
+     background-color:  rgb(111, 115, 112);
+     color: rgb(242, 245, 243);
+     font: 1.2em  "Georgia";
+ }
+ h1, h2{
+     color: #51AEF0;
+ }
+h1 {
+    font-size: 2em;
+}
+
+ h2 {
+     font: 1.2em  "Arial Black";
+}
+
+  strong {
+    color: yellowgreen;
+}
+   dt {
+      color: #FBEB04;
+       font: 0.9em "Cambria";
+  }
+dd {
+    padding: 5px;
+    font:  0.8em "sans-serif";
+}
+a:link {
+color: #F63401 ;
+}
+a:visited {
+    color: #FBEB04  ;
+}
+a:hover {
+    color: #0be654;
+}
+a:active {
+    color: #F07351 ;
+}
+.happymood {
+    background-color: #51AEF0;
+    margin: 10px;
+}
+.sadmood {
+    margin: 10px;
+    background-color: #F07351;
+}
