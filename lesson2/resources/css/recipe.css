@@ -13,7 +13,8 @@ body {
      list-style-image: url("../images/pie_bullet.png");
  }
 h1,h2 {
-    text-decoration: underline;
+    text-decoration: underline ;
+    text-underline-position: under;
     font-family: Lucida Sans Unicode, Helvetica, Arial ;
     word-spacing: 0.25em;
 }
@@ -52,7 +53,7 @@ a:active {
 
 #imagedesc  {
    list-style: none;
-   margin-left: 0px;
+  margin: 0;
     padding: 0px;
 
 }
