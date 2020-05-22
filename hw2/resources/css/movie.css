@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url("../images/background.png");
+    background-repeat: repeat;
+    font-size: 8pt;
+    font-family: Verdana, Tahoma;
+
+}
+
+#main-container {
+    max-width: 800px;
+    margin: auto;
+    border: 4px solid gray ;
+    border-radius: 20px;
+    overflow: auto;
+    position: relative;
+}
+
+#bannerimage  {
+    background: url("../images/bannerbg.png") repeat-x 50px;
+
+}
+#bannerimage {
+   text-align: center;
+   /* background-color: #F63401;*/
+}
+
+
+h1 {
+    font: bold 24pt  Tahoma, Verdana;
+    text-shadow: 3px 3px #999999;
+    text-align: center;
+}
+.rightContainer {
+    float: right;
+    max-width: 250px;
+    overflow: auto;
+    max-height: max-content;
+    background-color: #A2B964;
+    font: 8pt Arial;
+
+    box-sizing: border-box;
+}
+.rightContainer {
+   clear: right;
+}
+
+ .leftContainer {
+
+     column-count: 2;
+     column-gap: 2%;
+     max-width: 550px;
+     break-inside: avoid-column;
+ }
+.leftContainer p {
+    margin: 2%;
+}
+.rotten {
+    background: url("../images/rbg.png") repeat-x;
+    height: 83px;
+    column-span: all;
+}
+.rotten span {
+    color: red;
+    font-size: 48pt;
+    font-weight: bold;
+    vertical-align: top;
+}
+.rotten>img {
+    height: 83px;
+}
+
+ .quote-box {
+
+     background-color: #E8DC9B;
+     font-size: 8pt;
+     font-weight: bold;
+     border: 2px solid gray;
+     border-radius: 10px;
+
+}
+.quote-box  {
+    padding: 8px;
+
+}
+.quote-box img {
+    padding-right: 5px;
+    float: left;
+
+}
+.quote-box img::after{
+    clear: both;
+}
+.reviewer {
+    font-style: italic;
+
+    padding-bottom: 20px;
+}
+.reviewer img{
+    padding-right: 5px;
+    float: left;
+}
+.reviewer img::after {
+    clear:left;
+}
+
+dl  {
+    font-weight: bold;
+    text-indent: 5px;
+}
+dd {
+    padding-left: 25pt;
+    padding-bottom: 10pt;
+}
+.rightContainer dd ul {
+    list-style: none;
+    text-indent: 0;
+}
+
+.reviewsbar {
+    background-color: #A2B964;
+    padding: 5px;
+    bottom: 5px;
+    text-align: center;
+    position: relative;
+    width:  800px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom:  0pt;
+
+}
+.reviewsbar span {
+   /* background-color: #FBEB04;*/
+}
+.validator {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+.validator img {
+
+opacity: 0.5;
+}
+
+
