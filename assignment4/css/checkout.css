@@ -98,3 +98,13 @@ box-sizing: border-box;
 .product-list>div {
     text-align: left;
 }
+.validator {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+.validator img {
+
+    opacity: 0.5;
+}
