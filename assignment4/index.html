@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout: Shopping Cart</title>
+    <link href="images/checkouticon.png" type="text/icon" rel="icon">
+    <link href="css/checkout.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+
+<div id="main-content">
+
+    <div class="header">
+        Checkout information
+        <img src="images/icon72-05-512.png" alt="checkout image">
+
+
+    </div>
+
+<div class="clearfx"></div>
+<form method="post" action="/checkout">
+    <div class="person">
+        <fieldset>
+            <legend>Personal Detail</legend>
+         <div>
+            <label>
+               SSN:
+                <input type="text" name="ssn" pattern="[0-9]{3}\-[0-9]{2}\-[0-9]{4}" placeholder="xxx-xx-xxxx" required />
+            </label>
+          </div>
+
+              <div>
+       <label>
+           First Name:
+        <input type="text" name="firstname" required>
+       </label>
+              </div>
+              <div>
+                  <label>
+                      Middle Name:
+                      <input type="text" name="middlename" >
+                  </label>
+              </div>
+              <div>
+        <label>
+            Last Name:
+            <input type="text" name="lastname" required>
+        </label>
+              </div>
+
+              <div>
+        <label>
+            Phone Number:
+            <input type="text" name="phonenumber" pattern="\(\d{3}\)\s\d{3}[-]?\d{4}" placeholder="(641) xxx-xxxx" required>
+        </label>
+              </div>
+
+              <div>
+        <label>
+            Email address :
+            <input type="text" name="email" pattern="[A-Za-z]{3,}@[A-z][a-z]{2,}.\w{3}" placeholder="email" required>
+        </label>
+</div>
+
+
+        </fieldset>
+    </div>
+
+
+    <div class="shipping-address">
+
+<fieldset>
+    <legend>Shipping Address</legend>
+    <div>
+    <label>
+        <input type="checkbox" name="isresidential" >
+        This is residential address:
+    </label>
+    </div>
+
+
+    <div>
+    <label>
+        Street:
+        <input type="text" name="shipstreet" required>
+    </label>
+    </div>
+    <div>
+    <label>
+        City:
+        <input type="text" name="shipcity" required>
+    </label>
+    </div>
+
+    <div>
+    <label>
+        State:
+        <input type="text" name="shipstate" required>
+    </label>
+    </div>
+
+    <div>
+    <label>
+        Zip Code:
+        <input type="text" name="shipzip" required>
+    </label>
+    </div>
+    <div>
+    <label>
+        Country:
+        <input list="countrylist"   name="shipcountry" >
+    </label>
+    </div>
+</fieldset>
+
+
+    </div>
+
+
+<div class="clearfx"></div>
+
+<!--        Product list-->
+    <fieldset>
+        <legend>Product information</legend>
+
+     <div class="product-list">
+
+         <div>
+             Item
+             <div><input type="text" name="item" required></div>
+         </div>
+         <div>
+             Quantity
+             <div>
+                 <input type="number" min="1" max="100" step="1"  name="qtty">
+             </div>
+         </div>
+
+         <div>
+             Price
+             <div>
+                 <input type="text" name="price" required>
+             </div>
+         </div>
+         <div>
+             Transaction Date
+             <div>
+                 <input type="date" name="transactiondate" required>
+             </div>
+         </div>
+         <div>
+             Ship Date
+             <div>
+                 <input type="date" name="shipdate" >
+             </div>
+         </div>
+         <div>
+             Total Price
+             <div>
+                 <input type="totalprice" name="totalprice">
+             </div>
+         </div>
+         <div>
+             Total Price
+             <div>
+                 <input type="totalprice" name="totalprice">
+             </div>
+         </div>
+         <div>
+             Taxes
+             <div>
+                 <input type="text" name="tax"></td>
+             </div>
+         </div>
+
+
+    </div>
+
+    </fieldset>
+    <!--        Billing  Address-->
+    <div class="billing-address">
+        <fieldset>
+
+            <legend>Billing  Address</legend>
+            <div>
+                <label>
+                    Street:
+                    <input type="text" name="billstreet" required>
+                </label>
+            </div>
+            <div>
+                <label>
+                    City:
+                    <input type="text" name="billcity" required>
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    State:
+                    <input type="text" name="billstate" required>
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    Zip code:
+                    <input type="number" name="billzip" required>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Country:
+                    <input list="countrylist"  id="billcountry" name="billcountry" >
+                </label>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="payment">
+        <!--        Payment  -->
+        <fieldset>
+            <legend>Payment</legend>
+            <div>
+            <label>
+                Credit/ Debit Number:
+                <input type="number" name="cardnumber" required>
+            </label>
+            </div>
+           <div>
+            <label>
+                Security Code:
+                <input type="number" name="securitycode" required>
+            </label>
+           </div>
+            <div>
+            <label>
+                Expires :
+                <input type="month" name="expireddate"   required>
+            </label>
+            </div>
+
+        </fieldset>
+    </div>
+
+    <div class="clearfx"></div>
+
+    <div class="agreement">
+
+    <fieldset>
+        <legend>Agreement Form</legend>
+        <div class="agreement-box">
+
+            <label> <input type="checkbox" required>
+                I read and agree on the below agreement.
+            </label>
+        </div>
+        <div>
+            <textarea cols="50" rows="2" name="agreement" readonly>
+            I agree to the below terms.
+            Return is allowed with in 30 days after purchase!Shipping cost may apply.
+        </textarea>
+        </div>
+
+
+
+        <div class="button">
+            <input type="submit" value="Checkout" class="submit">
+
+        </div>
+    </fieldset>
+
+
+    </div>
+
+
+<datalist id="countrylist">
+    <option>United States</option>
+    <option>Canada</option>
+</datalist>
+
+</form>
+
+</div>
+
+<a href="../index.html" >Home</a>
+</body>
+</html>

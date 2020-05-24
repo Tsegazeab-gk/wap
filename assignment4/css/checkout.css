@@ -1,0 +1,100 @@
+* {
+
+}
+
+body {
+    max-width: 900px;
+    margin: auto;
+    font-size: 100%;
+
+    background-color: #999999;
+
+}
+#main-content {
+    background-color: lightgray;
+
+}
+.header {
+
+    font-size: 2.5em;
+    font-weight: bold;
+    vertical-align: bottom;
+}
+.header img {
+ float: left;
+    height:130px;
+}
+.header h1{
+      float: left;
+      width: 50%;
+}
+div {
+    padding: 5px;
+    box-sizing: border-box;
+}
+div input {
+    float: right;
+    min-width: 50%;
+    text-align: left;
+}
+
+.person {
+    float: left;
+    min-width: 50%;
+    max-width: 50%;
+}
+
+.shipping-address {
+    float: right;
+    max-width: 50%;
+    min-width: 50%;
+}
+.clearfx::after {
+    content: "";
+    display: table;
+    clear: both;
+    overflow: auto;
+}
+
+.billing-address {
+    float: left;
+    max-width: 50%;
+    min-width: 50%;
+}
+.payment {
+    float: right;
+    max-width: 50%;
+    min-width: 50%;
+}
+
+.agreement {
+    text-align: center;
+    width: 100%;
+}
+.button {
+    text-align: center;
+box-sizing: border-box;
+}
+.submit{
+    float: right;
+}
+
+.button input{
+    padding: 15px;
+    color: white;
+    background-color: lightseagreen;
+    border: #404040 2px solid;
+    border-radius: 10px;
+    margin: 5px;
+    font-size: 1.2em;
+    max-width: 25%;
+    box-sizing: border-box;
+}
+
+.product-list {
+
+    padding: 0;
+}
+.product-list>div {
+    text-align: left;
+}
