@@ -1,20 +1,40 @@
 
+* {
+    margin:0;
+    padding: 0;
+}
 body {
-    background-color: lightblue;
-}
-h1 {
-    color: white;
-    text-align: center;
-}
-p {
-    font-family: Verdana;
-    font-size: 20px;
-}
-p.small {
-    font-variant: all-small-caps;
+
+    width: 100%;
 }
 
-#12par {
-    text-align: center;
+.left-red {
+float: left;
+     border: 2px solid red;
+     position: relative;
+    width: 30%;
+    height: 500px;
+}
+.right-red {
+    float: left;
+    position: relative;
+    border: 2px solid green;
+    width: 69%;
+    height: 500px;
+}
+.yellow {
 
+   float: left;
+    top: 0;
+    width: 25%;
+    border: 1px solid yellow;
+    height: 300px;
+}
+.blue {
+
+    float: left;
+    width: 25%;
+    top: 0;
+    border: 1px solid lightseagreen;
+    height: 25%;
 }
