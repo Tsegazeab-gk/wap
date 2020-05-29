@@ -1,31 +1,34 @@
 
+
 function initialize() {
     let i = 0;
     let intervalID = null;
     let intervalTime = 250;
     let textvalue = null;
+    let selectedAnimation = null;
 
-
-    const btnSartElem = document.getElementById("btnstart");
+    let btnSartElem = document.getElementById("btnstart");
     btnSartElem.onclick = start;
 
-    const btnStopElem = document.getElementById("btnstop");
+    let btnStopElem = document.getElementById("btnstop");
     btnStopElem.onclick = end;
 
 
-    const selanimElem = document.getElementById("animation");
+    let selanimElem = document.getElementById("animation");
     selanimElem.onchange = animation;
 
-    const selsizeElem = document.getElementById("size");
+    let selsizeElem = document.getElementById("size");
     selsizeElem.onchange = changeSize;
 
-    const chkTurboElem = document.getElementById("check");
+    let chkTurboElem = document.getElementById("check");
     chkTurboElem.onchange = turboAnimate;
+
+    let textareaElem = document.getElementById("textarea");
 
     function controlDisplay(control) {
 
         //start clicked
-        if (control == 0) {
+        if (control === 0) {
             btnSartElem.disabled = true;
             selanimElem.disabled = true;
             btnStopElem.disabled = false;
@@ -38,66 +41,65 @@ function initialize() {
 
     //displaying animation
     function display() {
+        textareaElem.value = textvalue[i];
+        i = i + 1;
 
-        // console.log(x);
-        // document.getElementById("textarea").value=null;
-        document.getElementById("textarea").value = textvalue[i];
-        i++;
-        if (i == textvalue.length) i = 0;
-        console.log("Display: i=" + i);
+        if (i === textvalue.length) {
+            i = 0;
+        }
     }
 
     //start animation
     function start() {
         controlDisplay(0);
-        textvalue = document.getElementById("textarea").value.split('=====');
-if(intervalID==null){
-        intervalID = setInterval(display, intervalTime);
-}
+        textvalue = textareaElem.value.split("=====");
+        if (intervalID === null) {
+            intervalID = setInterval(display, intervalTime);
+        }
         //console.log(intervalID + " i=" + i)
     }
 
     //end animation
     function end() {
 
-        if (intervalID != null) {
+        if (intervalID !== null) {
             controlDisplay(1);
 
             clearInterval(intervalID);
-         intervalID=null;
+            intervalID = null;
         }
-        i=0;
-            document.getElementById("textarea").value = ANIMATIONS[document.getElementById("animation").value];
+        i = 0;
+        selectedAnimation = selanimElem.value;
+        textareaElem.value = ANIMATIONS[selectedAnimation];
 
     }
 
-    function animation(x) {
+    function animation() {
         //alert(this.value)
-        document.getElementById("textarea").value = ANIMATIONS[this.value];
+        textareaElem.value = ANIMATIONS[this.value];
 
     }
 
     function changeSize() {
-        document.getElementById("textarea").style.fontSize = this.value;
+        textareaElem.style.fontSize = this.value;
     }
 
     function turboAnimate() {
-        if(intervalID!=null){
-        // alert(this.checked)
-        if (this.checked) {
-            clearInterval(intervalID);
-            intervalTime = 50;
-            intervalID = setInterval(display, intervalTime);
+        if (intervalID !== null) {
+            // alert(this.checked)
+            if (this.checked) {
+                clearInterval(intervalID);
+                intervalTime = 50;
+                intervalID = setInterval(display, intervalTime);
 
-        } else {
-            clearInterval(intervalID);
-            intervalTime = 250;
-            intervalID = setInterval(display, intervalTime);
-        }
+            } else {
+                clearInterval(intervalID);
+                intervalTime = 250;
+                intervalID = setInterval(display, intervalTime);
+            }
         }
     }
 
 
 }
-
 window.onload = initialize;
