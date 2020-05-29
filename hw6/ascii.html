@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="animations.js"></script>
+    <script src="ascii.js"></script>
+    <link href="ascii.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+<h1>CSE 190 M ASCII Animation Viewer</h1>
+
+<div class="text-box">
+<textarea cols="80" rows="20" id="textarea"></textarea>
+
+</div>
+<div class="fields">
+
+    <fieldset>
+        <legend>Play Controls: </legend>
+
+        <button type="button" name="btnstart"  id="btnstart">Start</button>
+        <button type="button" name="btnstop" id="btnstop">Stop</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>Animation: </legend>
+        <select name="animation" id="animation">
+            <option value="Blank" selected>Blank</option>
+            <option value="Exercise">Exercise</option>
+            <option value="Juggler">Juggler</option>
+            <option value="Bike">Bike</option>
+            <option value="Dive">Dive</option>
+            <option value="Custom">Custom</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Size: </legend>
+        <select name="size" id="size">
+            <option value="7pt">Tiny</option>
+            <option value="10pt">Small</option>
+            <option value="12pt">Medium</option>
+            <option value="16pt">Large</option>
+            <option value="24pt">Extra Large</option>
+            <option value="32pt">XXL</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Speed: </legend>
+        <label>
+            <input type="checkbox" name="check" id="check">Turbo
+        </label>
+    </fieldset>
+</div>
+<a href="https://webster.cs.washington.edu/jslint/?referer">
+    <img src="https://webster.cs.washington.edu/w3c-js.png" alt="Valid JS" />
+</a>
+</body>
+</html>
