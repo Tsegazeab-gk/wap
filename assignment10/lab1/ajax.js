@@ -1,21 +1,20 @@
 "use strict";
-
 $(function() {
     $('#hw').change(function() {
-        var file = 'homeworks/'+$('#hw').val();
+        var file = 'assignment10/lab1/'+$('#hw').val();
         $.ajax({
             'url': file,
             'type': 'GET',
-            'success': ajaxSuccess,
-            'error': ajaxFailure
+            'success': onSuccess,
+            'error': onFailure
         });
     });
 });
 
-function ajaxSuccess(data) {
+function onSuccess(data) {
     $('#output').val(data);
 }
 
-function ajaxFailure(xhr, status, exception) {
+function onFailure(xhr, status, exception) {
     console.log(xhr, status, exception);
 }
