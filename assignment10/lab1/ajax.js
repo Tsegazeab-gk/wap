@@ -1,13 +1,18 @@
 "use strict";
 $(function() {
     $('#hw').change(function() {
-        var file = 'assignment10/lab1/'+$('#hw').val();
+        let file = ''+$('#hw').val();
+        console.log(file);
+        if(file.length==0) {
+            $('#output').val('');
+        } else {
         $.ajax({
             'url': file,
             'type': 'GET',
             'success': onSuccess,
             'error': onFailure
         });
+        }
     });
 });
 
